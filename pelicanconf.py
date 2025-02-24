@@ -15,19 +15,14 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# # Blogroll
-# LINKS = (
-#     ("Pelican", "https://getpelican.com/"),
-#     ("Python.org", "https://www.python.org/"),
-#     ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-#     ("You can modify those links in your config file", "#"),
-# )
+# Blogroll
+LINKS = (
+    ("ArcaneNibble's GitHub", "https://github.com/ArcaneNibble"),
+    ("jediminer543's GitHub", "https://github.com/jediminer543"),
+)
 
 # Social widget
-SOCIAL_WIDGET_NAME = "GitHub"
 SOCIAL = (
-    ("ArcaneNibble", "https://github.com/ArcaneNibble"),
-    ("jediminer543", "https://github.com/jediminer543"),
 )
 
 DEFAULT_PAGINATION = False

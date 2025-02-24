@@ -1,0 +1,34 @@
+name: pages
+
+permissions:
+  id-token: write
+  pages: write
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install pelican
+        run: |
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: Build site
+        run: |
+          source venv/bin/activate
+          make publish
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "output/"
+
+      - uses: actions/deploy-pages@v4
